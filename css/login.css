@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 900px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper-left{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.wrapper-left > .form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-left > .form > .form-control{
+    padding-block: 15px;
+    padding-inline: 30px;
+    margin-block: 10px;
+    outline: none;
+    border: 1px dotted rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.wrapper-left > .form > .form-control[type=submit]{
+    background-color: black;
+    color: white;
+}
+
+.wrapper-right{
+    width: 50%;
+    position: relative;
+    height: inherit;
+    background-image: url("../images/login2.jpg");
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
+}
+.wrapper-text{
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.text-with-name{
+    /* background-color: aquamarine; */
+    width: inherit;
+    height: 50px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-name{
+    font-size: 1.2rem;
+}
+
+.text-rating{
+    /* background-color: red; */
+    right: 0;
+    width: 100px;
+    height: inherit;
+}
+
+@media screen and (max-width: 600px){
+        .wrapper-right{
+            display: none;
+        }
+
+        h1{
+            color: white;
+        }
+
+        .container{
+            background-image: url('../images/login2.jpg');
+            width: clamp(90vw, 150px, 90%);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+}
